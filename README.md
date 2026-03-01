@@ -2,10 +2,7 @@
 
 > A tiny static site built with **Vite** and deployable to **Cloudflare Workers**.
 
-The project consists of two pages:
-
-- `index.html` – public landing page
-- `private.html` – a hidden page that can only be accessed by a specific sub‑domain
+This project is for one page: `index.html` - the public landing page when someone outside my VPN tries to access [atieve.com](https://atieve.com)
 
 The assets (favicons, shared CSS, etc.) live in the `public/` folder and are served at the root of the site.
 
@@ -20,10 +17,7 @@ The assets (favicons, shared CSS, etc.) live in the `public/` folder and are ser
 │  │  ├─ favicon_io/      # favicons & site.webmanifest
 │  │  └─ css/
 │  │     └─ shared.css    # shared styling
-├─ src/
-│  └─ main.js             # empty Vite entry (required by Vite)
 ├─ index.html
-├─ private.html
 ├─ vite.config.ts
 ├─ package.json
 └─ README.md
@@ -35,7 +29,7 @@ The assets (favicons, shared CSS, etc.) live in the `public/` folder and are ser
 
 ```bash
 # Install dependencies
-npm ci
+npm install
 
 # Development server (live reload)
 npm run dev
@@ -46,7 +40,7 @@ npm run build
 # Preview the production build locally
 npm run preview
 
-# Deploy to Cloudflare Workers (requires a Cloudflare account + wrangler config)
+# Deploy to Cloudflare Workers (requires Cloudflare login)
 npm run deploy
 ```
 
@@ -77,16 +71,5 @@ npm run deploy
 | `build` | Builds the static assets into `dist/`. |
 | `preview` | Serves the built `dist/` locally to test the production output. |
 | `deploy` | Builds the project and pushes it to Cloudflare Workers. |
-
----
-
-## 🛠️ Development Notes
-
-* **Favicons** – All favicon files are in `public/assets/favicon_io`.  
-  They are referenced in the HTML with relative paths (`/assets/favicon_io/...`).
-* **Shared CSS** – Put all common styling into `public/assets/css/shared.css` and link it in both pages:
-  ```html
-  <link rel="stylesheet" href="/assets/css/shared.css">
-  ```
 
 ---
