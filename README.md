@@ -88,7 +88,5 @@ npm run deploy
   ```html
   <link rel="stylesheet" href="/assets/css/shared.css">
   ```
-* **Private page** – Keep `private.html` in the root so that it’s not bundled by Vite.  
-  Cloudflare routing rules can expose it only on a specific sub‑domain.
 
 ---

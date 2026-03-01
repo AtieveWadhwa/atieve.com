@@ -1,0 +1,10 @@
+{
+  "name": "public",
+  "compatibility_date": "2026-03-01",
+  "routes": [
+    {
+      "pattern": "atieve.com",
+      "custom_domain": true
+    }
+  ]
+}
